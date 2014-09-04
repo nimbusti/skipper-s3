@@ -220,6 +220,7 @@ module.exports = function SkipperS3 (globalOpts) {
         client: knox.createClient({
           key: options.key,
           secret: options.secret,
+          headers:options.headers,
           bucket: options.bucket,
           region: globalOpts.region||undefined,
           endpoint: globalOpts.endpoint||undefined
